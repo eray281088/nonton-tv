@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        netflix: '#E50914',
+                        netflixDark: '#B20710',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-black text-white">
+    <!-- Header -->
+    <header class="fixed w-full z-50 bg-gradient-to-b from-black to-transparent">
+        <div class="flex items-center justify-between px-4 py-3 md:px-12">
+            <div class="flex items-center">
+                <i class="fab fa-netflix text-netflix text-4xl mr-2"></i>
+                <span class="text-2xl font-bold">NETFLIX</span>
+            </div>
+            
+            <div class="hidden md:flex space-x-6">
+                <a href="#" class="hover:text-gray-300">Home</a>
+                <a href="#" class="hover:text-gray-300">TV Shows</a>
+                <a href="#" class="hover:text-gray-300">Movies</a>
+                <a href="#" class="hover:text-gray-300">New & Popular</a>
+                <a href="#" class="hover:text-gray-300">My List</a>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <div class="relative hidden md:block">
+                    <input type="text" placeholder="Search" class="bg-black bg-opacity-50 border border-gray-600 rounded px-3 py-1 text-sm">
+                    <i class="fas fa-search absolute right-3 top-2 text-gray-400"></i>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-bell text-xl mr-4"></i>
+                    <div class="w-8 h-8 rounded bg-netflix flex items-center justify-center">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center">
+        <div class="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent z-10"></div>
+        <img src="https://images.pexels.com/photos/3945317/pexels-photo-3945317.jpeg" 
+             alt="Hero Background" 
+             class="absolute inset-0 w-full h-full object-cover">
+        
+        <div class="relative z-20 px-8 md:px-16 max-w-3xl">
+            <h1 class="text-5xl md:text-6xl font-bold mb-4">Unlimited movies, TV shows, and more.</h1>
+            <p class="text-xl mb-6">Watch anywhere. Cancel anytime.</p>
+            <p class="text-lg mb-8">Ready to watch? Enter your email to create or restart your membership.</p>
+            
+            <div class="flex flex-col md:flex-row gap-2">
+                <input type="email" placeholder="Email address" 
+                       class="bg-black bg-opacity-70 border border-gray-600 rounded px-4 py-3 md:w-96">
+                <button class="bg-netflix hover:bg-netflixDark text-white font-bold py-3 px-6 rounded flex items-center">
+                    Get Started <i class="fas fa-chevron-right ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Sections -->
+    <div class="py-12 px-8 md:px-16 space-y-12">
+        <!-- Trending Now -->
+        <section>
+            <h2 class="text-2xl font-bold mb-6">Trending Now</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <!-- Card 1 -->
+                <div class="group relative rounded overflow-hidden">
+                    <img src="https://images.pexels.com/photos/315938/pexels-photo-315938.jpeg" 
+                         alt="Movie 1" 
+                         class="w-full h-48 md:h-64 object-cover group-hover:opacity-50 transition">
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                        <button class="bg-netflix hover:bg-netflixDark text-white rounded-full w-12 h-12 flex items-center justify-center">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="group relative rounded overflow-hidden">
+                    <img src="https://images.pexels.com/photos/7991579/pexels-photo-7991579.jpeg" 
+                         alt="Movie 2" 
+                         class="w-full h-48 md:h-64 object-cover group-hover:opacity-50 transition">
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                        <button class="bg-netflix hover:bg-netflixDark text-white rounded-full w-12 h-12 flex items-center justify-center">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="group relative rounded overflow-hidden">
+                    <img src="https://images.pexels.com/photos/7238759/pexels-photo-7238759.jpeg" 
+                         alt="Movie 3" 
+                         class="w-full h-48 md:h-64 object-cover group-hover:opacity-50 transition">
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                        <button class="bg-netflix hover:bg-netflixDark text-white rounded-full w-12 h-12 flex items-center justify-center">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="group relative rounded overflow-hidden">
+                    <img src="https://images.pexels.com/photos/1117132/pexels-photo-1117132.jpeg" 
+                         alt="Movie 4" 
+                         class="w-full h-48 md:h-64 object-cover group-hover:opacity-50 transition">
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                        <button class="bg-netflix hover:bg-netflixDark text-white rounded-full w-12 h-12 flex items-center justify-center">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular on Netflix -->
+        <section>
+            <h2 class="text-2xl font-bold mb-6">Popular on Netflix</h2>
+            <div class="relative">
+                <div class="flex overflow-x-auto space-x-4 pb-4 scrollbar-hide">
+                    <!-- Horizontal scrolling cards -->
+                    <div class="flex-none w-64 h-36 md:w-80 md:h-44 bg-gray-800 rounded flex items-center justify-center">
+                        <span class="text-lg">Popular Show 1</span>
+                    </div>
+                    <div class="flex-none w-64 h-36 md:w-80 md:h-44 bg-gray-800 rounded flex items-center justify-center">
+                        <span class="text-lg">Popular Show 2</span>
+                    </div>
+                    <div class="flex-none w-64 h-36 md:w-80 md:h-44 bg-gray-800 rounded flex items-center justify-center">
+                        <span class="text-lg">Popular Show 3</span>
+                    </div>
+                    <div class="flex-none w-64 h-36 md:w-80 md:h-44 bg-gray-800 rounded flex items-center justify-center">
+                        <span class="text-lg">Popular Show 4</span>
+                    </div>
+                    <div class="flex-none w-64 h-36 md:w-80 md:h-44 bg-gray-800 rounded flex items-center justify-center">
+                        <span class="text-lg">Popular Show 5</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Releases -->
+        <section>
+            <h2 class="text-2xl font-bold mb-6">New Releases</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <!-- 6 cards with placeholder content -->
+                <div class="bg-gray-800 h-32 rounded"></div>
+                <div class="bg-gray-800 h-32 rounded"></div>
+                <div class="bg-gray-800 h-32 rounded"></div>
+                <div class="bg-gray-800 h-32 rounded"></div>
+                <div class="bg-gray-800 h-32 rounded"></div>
+                <div class="bg-gray-800 h-32 rounded"></div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-500 py-12 px-8 md:px-16">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex items-center mb-8">
+                <i class="fab fa-facebook text-2xl mr-4 hover:text-white cursor-pointer"></i>
+                <i class="fab fa-instagram text-2xl mr-4 hover:text-white cursor-pointer"></i>
+                <i class="fab fa-twitter text-2xl mr-4 hover:text-white cursor-pointer"></i>
+                <i class="fab fa-youtube text-2xl hover:text-white cursor-pointer"></i>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">Audio Description</a></li>
+                        <li><a href="#" class="hover:text-white">Investor Relations</a></li>
+                        <li><a href="#" class="hover:text-white">Legal Notices</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">Help Center</a></li>
+                        <li><a href="#" class="hover:text-white">Jobs</a></li>
+                        <li><a href="#" class="hover:text-white">Cookie Preferences</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">Gift Cards</a></li>
+                        <li><a href="#" class="hover:text-white">Terms of Use</a></li>
+                        <li><a href="#" class="hover:text-white">Corporate Information</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">Media Center</a></li>
+                        <li><a href="#" class="hover:text-white">Privacy</a></li>
+                        <li><a href="#" class="hover:text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mb-8">
+                <button class="border border-gray-500 px-4 py-1 rounded flex items-center">
+                    <i class="fas fa-globe mr-2"></i> English
+                    <i class="fas fa-caret-down ml-2"></i>
+                </button>
+            </div>
+            
+            <p class="text-sm">© 2023 Netflix Clone, Inc.</p>
+        </div>
+    </footer>
+</body>
+</html>
